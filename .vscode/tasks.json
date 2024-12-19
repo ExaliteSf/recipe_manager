@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+	  {
+		"label": "Docker Compose Up -d",
+		"type": "shell",
+		"command": "docker",
+		"args": [
+		  "compose",
+		  "up",
+		  "-d"
+		],
+		"options": {
+		  "cwd": "${workspaceFolder}/docker"
+		},
+		"group": {
+		  "kind": "build",
+		  "isDefault": true
+		},
+		"problemMatcher": [],
+		"detail": "Exécute docker compose up -d dans le dossier docker"
+	  }
+	]
+  }
+  
