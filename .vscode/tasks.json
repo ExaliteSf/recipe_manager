@@ -1,25 +1,33 @@
 {
 	"version": "2.0.0",
 	"tasks": [
-	  {
-		"label": "Docker Compose Up -d",
-		"type": "shell",
-		"command": "docker",
-		"args": [
-		  "compose",
-		  "up",
-		  "-d"
-		],
-		"options": {
-		  "cwd": "${workspaceFolder}/docker"
+		{
+			"label": "Docker Compose Up -d",
+			"type": "shell",
+			"command": "docker",
+			"args": [
+				"compose",
+				"up",
+				"-d"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}/docker"
+			},
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": [],
+			"detail": "Exécute docker compose up -d dans le dossier docker"
 		},
-		"group": {
-		  "kind": "build",
-		  "isDefault": true
-		},
-		"problemMatcher": [],
-		"detail": "Exécute docker compose up -d dans le dossier docker"
-	  }
+		{
+			"type": "npm",
+			"script": "start",
+			"path": "recipe_manager_front",
+			"problemMatcher": [],
+			"label": "npm: startn${cwd}",
+			"detail": "ng serve"
+		}
 	]
   }
   
